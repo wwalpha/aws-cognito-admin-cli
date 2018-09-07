@@ -12,9 +12,9 @@ export const adminCreateUser = (provider: CognitoIdentityServiceProvider, params
     });
   });
 
-export const initiateAuth = (provider: CognitoIdentityServiceProvider, params: CognitoIdentityServiceProvider.Types.InitiateAuthRequest):
-  Promise<CognitoIdentityServiceProvider.InitiateAuthResponse> => new Promise((resolve, reject) => {
-    provider.initiateAuth(params, (err: AWSError, data: CognitoIdentityServiceProvider.InitiateAuthResponse) => {
+export const adminInitiateAuth = (provider: CognitoIdentityServiceProvider, params: CognitoIdentityServiceProvider.Types.AdminInitiateAuthRequest):
+  Promise<CognitoIdentityServiceProvider.AdminInitiateAuthResponse> => new Promise((resolve, reject) => {
+    provider.adminInitiateAuth(params, (err: AWSError, data: CognitoIdentityServiceProvider.AdminInitiateAuthResponse) => {
       if (err) {
         reject(err);
         return;

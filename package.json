@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "regist": "ts-node src/app.ts regist -u test999 -p P@ssw0rd -e ttt@ccc.com",
+    "delete": "ts-node src/app.ts delete test999"
   },
   "author": "",
   "license": "ISC",
