@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "regist": "ts-node src/app.ts regist -u test999 -p P@ssw0rd -e ttt@ccc.com",
-    "delete": "ts-node src/app.ts delete test999"
+    "help": "ts-node src/app.ts -h",
+    "rgt": "ts-node src/app.ts regist -u test999 -p P@ssw0rd -e ttt@ccc.com -P http://10.201.0.10:60088",
+    "del": "ts-node src/app.ts delete test999 -P http://10.201.0.10:60088",
+    "build": "webpack --config webpack.config.js",
+    "rgt:prod": "node dist/app.js regist -u test999 -p P@ssw0rd -e ttt@ccc.com -P http://10.201.0.10:60088",
+    "del:prod": "node dist/app.js delete test999 -P http://10.201.0.10:60088"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +26,7 @@
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
     "typescript": "^3.0.3",
-    "webpack": "^4.17.2"
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
   }
 }

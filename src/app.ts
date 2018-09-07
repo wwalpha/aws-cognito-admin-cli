@@ -101,8 +101,8 @@ Program
   .command('delete <username>')
   .option('-P, --proxy <proxy>', 'プロキシ')
   .description('ユーザ削除')
-  .action((cmd: any) => {
-    const { proxy, username } = cmd;
+  .action((username: string, options: any) => {
+    const { proxy } = options;
 
     // 必須チェック
     if (!username) exit(REQUIRED('ユーザ名'));
