@@ -45,7 +45,14 @@ Program
     await adminCreateUser(provider, {
       Username: username,
       UserPoolId: Config.Auth.userPoolId,
+      UserAttributes: [{
+        Name: 'email',
+        Value: email,
+      }],
       TemporaryPassword: password,
+      DesiredDeliveryMediums: [
+        'EMAIL',
+      ],
     });
 
     // 認証フロー
