@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const HappyPack = require('happypack');
 
-console.log(path.resolve(__dirname, 'app.ts'));
 module.exports = {
   mode: 'production',
   entry: [
