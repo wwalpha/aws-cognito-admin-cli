@@ -35,3 +35,15 @@ export const respondToAuthChallenge = (provider: CognitoIdentityServiceProvider,
       resolve(data);
     });
   });
+
+export const adminDeleteUser = (provider: CognitoIdentityServiceProvider, params: CognitoIdentityServiceProvider.Types.AdminDeleteUserRequest):
+  Promise<any> => new Promise((resolve, reject) => {
+    provider.adminDeleteUser(params, (err: AWSError, data: any) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve(data);
+    });
+  });
