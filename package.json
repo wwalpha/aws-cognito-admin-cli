@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "help": "ts-node src/app.ts -h",
-    "rgt": "ts-node src/app.ts regist -u test999 -p P@ssw0rd -e ttt@ccc.com ",
+    "rgt": "ts-node src/app.ts regist -u wwalpha -p 9999999 -e wwalpha@gmail.com",
     "del": "ts-node src/app.ts delete test999",
     "build": "webpack --config webpack.config.js",
     "rgt:prod": "node dist/app.js regist -u test999 -p P@ssw0rd -e ttt@ccc.com",
